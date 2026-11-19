@@ -1,1 +1,0 @@
-import{_ as e,v as t}from"./index-F0GWPF1Q.js";function n(n){let r=t(),i=e();return function(){i.key==="default"?r(n):r(-1)}}export{n as t};
