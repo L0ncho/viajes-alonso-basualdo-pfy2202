@@ -1,1 +1,0 @@
-import{b as e,y as t}from"./index-BOIg9Rot.js";function n(n){let r=e(),i=t();return function(){i.key==="default"?r(n):r(-1)}}export{n as t};

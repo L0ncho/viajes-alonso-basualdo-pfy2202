@@ -9,26 +9,25 @@
       content="AirFly, agencia de viajes: explora destinos y compara vuelos y hoteles para planificar tu próximo viaje."
     />
     <title>AirFly · Vuelos y hoteles para tu próximo viaje</title>
-    <!-- Aplica el tema antes de que cargue React para evitar un destello del tema claro.
-         Usa la misma clave que src/utils/tema.js. Leer localStorage va en try/catch: con el
-         almacenamiento bloqueado lanza SecurityError y se sigue la preferencia del sistema -->
-    <script>
-      (function () {
-        var tema = null
-        try {
-          tema = localStorage.getItem('airfly-tema')
-        } catch (e) {}
-        if (tema !== 'oscuro' && tema !== 'claro') {
-          tema = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'oscuro' : 'claro'
-        }
-        document.documentElement.setAttribute('data-tema', tema)
-      })()
-    </script>
-    <script type="module" crossorigin src="/viajes-alonso-basualdo-pfy2202/assets/index-BOIg9Rot.js"></script>
+    <!-- vite.config.js inserta aquí el script que aplica el tema (src/utils/tema.js) -->
+    <script type="module" crossorigin src="/viajes-alonso-basualdo-pfy2202/assets/index-BUcwQmax.js"></script>
     <link rel="modulepreload" crossorigin href="/viajes-alonso-basualdo-pfy2202/assets/rolldown-runtime-XKyaHtl9.js">
     <link rel="stylesheet" crossorigin href="/viajes-alonso-basualdo-pfy2202/assets/index-nnXMleqH.css">
+    <script>(function () {
+  var clave = "airfly-tema"
+  var claro = "claro"
+  var oscuro = "oscuro"
+  var tema = null
+  try {
+    tema = localStorage.getItem(clave)
+  } catch (e) {}
+  if (tema !== oscuro && tema !== claro) {
+    tema = window.matchMedia('(prefers-color-scheme: dark)').matches ? oscuro : claro
+  }
+  document.documentElement.setAttribute('data-tema', tema)
+})()</script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"></div>
   </body>
 </html>
